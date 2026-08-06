@@ -51,32 +51,51 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 
 # Linux (Debian/Ubuntu)
 
-```bash sudo apt update ```
+```bash 
+sudo apt update
+```
 
-```bash sudo apt install -y git ```
+```bash 
+sudo apt install -y git
+```
 
-```bash # Instalação do Terraform ```
+# Instalação do Terraform
 
-```bash wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null ```
+```bash 
+wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+```
 
-```bash echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list ```
+```bash 
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+```
 
-```bash sudo apt update ```
+```bash 
+sudo apt update
+```
 
-```bash sudo apt install -y terraform ```
-
+```bash 
+sudo apt install -y terraform
+```
 
 #Crie conta AWS em aws.amazon.com e Instale do AWS CLI v2
 
-```bash curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ```
+```bash 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
 
-```bash unzip awscliv2.zip ```
+```bash 
+unzip awscliv2.zip
+```
 
-```bash sudo ./aws/install ```
+```bash 
+sudo ./aws/install
+```
 
 # Execute o aws configure para colocar as credenciais:
 
-```bash aws configure ```
+```bash 
+aws configure
+```
 
 ## O comando vai pedir quatro informações, uma por vez:
 ## AWS Access Key ID [None]: <SUA_ACCESS_KEY_ID>
@@ -86,10 +105,18 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 
 # Checklist final de verificação
 
-```bash git --version ```
-```bash terraform -version ```
-```bash aws --version ```
-```bash aws sts get-caller-identity ```
+```bash 
+git --version
+```
+```bash
+terraform -version
+```
+```bash
+aws --version
+```
+```bash
+aws sts get-caller-identity
+```
 
 O último comando confirma que suas credenciais IAM estão configuradas corretamente e mostra qual
 usuário está autenticado. Saída esperada:
