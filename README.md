@@ -338,7 +338,6 @@ aws s3 rb s3://danilo-terraform-backend-2026 --force
 <small>
     
 Output:
-
 ```bash
 delete: s3://danilo-terraform-backend-2026/terraform/atividade1/terraform.tfstate
 delete: s3://danilo-terraform-backend-2026/env:/dev/terraform/atividade1/terraform.tfstate
@@ -346,14 +345,15 @@ delete: s3://danilo-terraform-backend-2026/env:/prod/terraform/atividade1/terraf
 remove_bucket: danilo-terraform-backend-2026
 ```
 </small>
-Comando:    
+
+Comando:
+
 ```bash
 aws dynamodb delete-table --table-name terraform-locks
 ```
 <small>
     
 Output:
-
 ```bash
 {
     "TableDescription": {
