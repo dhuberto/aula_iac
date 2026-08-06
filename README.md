@@ -176,7 +176,8 @@ mv backend.tf.disabled backend.tf
 ## Migrar o estado para o S3
 ```bash
 terraform init -migrate-state
-``` # Responda: yes
+```
+# Responda: yes
 
 ## Crie os workspaces dos ambientes separados e aplique:
 ```bash
