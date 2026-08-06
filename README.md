@@ -268,6 +268,7 @@ Comando:
 ```bash
 terraform validate
 ```
+Output:
 ```bash
 Success! The configuration is valid.
 ```
