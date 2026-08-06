@@ -271,6 +271,29 @@ Destroy complete! Resources: 7 destroyed.
 ```bash
 terraform workspace select prod && terraform destroy -auto-approve
 ```
+Output:
+```bash
+module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-0f1deb0cfec31c8aa]
+module.webserver.aws_instance.server: Destroying... [id=i-04554525911f9a754]
+module.webserver.aws_route_table_association.public: Destruction complete after 1s
+module.webserver.aws_route_table.public: Destroying... [id=rtb-0e396842687ae1b83]
+module.webserver.aws_route_table.public: Destruction complete after 1s
+module.webserver.aws_internet_gateway.main: Destroying... [id=igw-070675fba1eec7251]
+module.webserver.aws_instance.server: Still destroying... [id=i-04554525911f9a754, 00m42s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-070675fba1eec7251, 00m42s elapsed]
+module.webserver.aws_instance.server: Destruction complete after 44s
+module.webserver.aws_internet_gateway.main: Destruction complete after 43s
+module.webserver.aws_security_group.web: Destroying... [id=sg-0192f93a3bc74c1b3]
+module.webserver.aws_subnet.public: Destroying... [id=subnet-0e6d70621453ce7df]
+module.webserver.aws_subnet.public: Destruction complete after 1s
+module.webserver.aws_security_group.web: Destruction complete after 1s
+module.webserver.aws_vpc.main: Destroying... [id=vpc-0382c834120639524]
+module.webserver.aws_vpc.main: Destruction complete after 1s
+Releasing state lock. This may take a few moments...
+
+Destroy complete! Resources: 7 destroyed.
+```
+
 ```bash
 aws s3 rb s3://danilo-terraform-backend-2026 --force
 ```
