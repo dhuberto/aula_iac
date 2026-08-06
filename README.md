@@ -261,7 +261,7 @@ Success! The configuration is valid.
 ```
 
 ## Caso queira Destruir (apagar tudo)
-
+Comando: 
 ```bash
 cd ~/aula_iac
 ```
