@@ -97,7 +97,8 @@ sudo ./aws/install
 aws configure
 ```
 ```bash 
-O comando vai pedir quatro informações, uma por vez:
+# O comando vai pedir quatro informações, uma por vez:
+
 AWS Access Key ID [None]: <SUA_ACCESS_KEY_ID>
 AWS Secret Access Key [None]: <SUA_SECRET_ACCESS_KEY>
 Default region name [None]: us-east-1
