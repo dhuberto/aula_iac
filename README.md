@@ -166,6 +166,7 @@ terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_
 
 ## Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
 ```bash
+mv backend.tf backend.tf.disabled
 mv backend-setup.tf backend-setup.tf.bak
 ```
 
