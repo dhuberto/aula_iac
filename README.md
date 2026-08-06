@@ -241,6 +241,33 @@ cd ~/aula_iac
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
+Output:
+```bash
+module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-08d6e3e72fe176e97]
+module.webserver.aws_instance.server: Destroying... [id=i-0ada4f3bdba3c35da]
+module.webserver.aws_route_table_association.public: Destruction complete after 2s
+module.webserver.aws_route_table.public: Destroying... [id=rtb-009389562204e529c]
+module.webserver.aws_route_table.public: Destruction complete after 1s
+module.webserver.aws_internet_gateway.main: Destroying... [id=igw-099d362b60d62ad9d]
+module.webserver.aws_instance.server: Still destroying... [id=i-0ada4f3bdba3c35da, 00m10s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-099d362b60d62ad9d, 00m10s elapsed]
+module.webserver.aws_instance.server: Still destroying... [id=i-0ada4f3bdba3c35da, 00m20s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-099d362b60d62ad9d, 00m20s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-099d362b60d62ad9d, 00m43s elapsed]
+module.webserver.aws_instance.server: Still destroying... [id=i-0ada4f3bdba3c35da, 00m46s elapsed]
+module.webserver.aws_instance.server: Destruction complete after 47s
+module.webserver.aws_subnet.public: Destroying... [id=subnet-078e1191d54cc20d0]
+module.webserver.aws_security_group.web: Destroying... [id=sg-039efae4c2d379540]
+module.webserver.aws_internet_gateway.main: Destruction complete after 45s
+module.webserver.aws_security_group.web: Destruction complete after 1s
+module.webserver.aws_subnet.public: Destruction complete after 1s
+module.webserver.aws_vpc.main: Destroying... [id=vpc-0f85088cf31f9df46]
+module.webserver.aws_vpc.main: Destruction complete after 0s
+Releasing state lock. This may take a few moments...
+
+Destroy complete! Resources: 7 destroyed.
+```
+
 ```bash
 terraform workspace select prod && terraform destroy -auto-approve
 ```
