@@ -252,6 +252,7 @@ cd ~/aula_iac
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
+<small>
 Output:
 ```bash
 module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-08d6e3e72fe176e97]
@@ -278,10 +279,12 @@ Releasing state lock. This may take a few moments...
 
 Destroy complete! Resources: 7 destroyed.
 ```
+</small>
 
 ```bash
 terraform workspace select prod && terraform destroy -auto-approve
 ```
+<small>
 Output:
 ```bash
 module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-0f1deb0cfec31c8aa]
@@ -304,10 +307,11 @@ Releasing state lock. This may take a few moments...
 
 Destroy complete! Resources: 7 destroyed.
 ```
-
+</small>
 ```bash
 aws s3 rb s3://danilo-terraform-backend-2026 --force
 ```
+<small>
 Output:
 
 ```bash
@@ -316,10 +320,12 @@ delete: s3://danilo-terraform-backend-2026/env:/dev/terraform/atividade1/terrafo
 delete: s3://danilo-terraform-backend-2026/env:/prod/terraform/atividade1/terraform.tfstate
 remove_bucket: danilo-terraform-backend-2026
 ```
-
+</small>
+    
 ```bash
 aws dynamodb delete-table --table-name terraform-locks
 ```
+<small>
 Output:
 
 ```bash
@@ -344,3 +350,4 @@ Output:
     }
 }
 ```
+</small>
