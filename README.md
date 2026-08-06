@@ -96,7 +96,9 @@ sudo ./aws/install
 ```bash 
 aws configure
 ```
-```bash 
+
+```bash
+
 O comando vai pedir quatro informações, uma por vez:
 
 # AWS Access Key ID [None]: <SUA_ACCESS_KEY_ID>
