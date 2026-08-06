@@ -183,6 +183,23 @@ terraform init -migrate-state
 ```bash
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
+Outputs:
+
+descricao_portas_adicionais = "Portas adicionais liberadas: 22"
+dns_publico_instancia = "ec2-54-242-xxx-xxx.compute-1.amazonaws.com"
+ip_publico_instancia = "54.242.xxx.xxx"
+security_group_id = "sg-039efaexxx"
+senha_exemplo_sensivel = <sensitive>
+subnet_id = "subnet-078e1191xxx"
+tags_aplicadas = {
+  "Ambiente" = "dev"
+  "Curso" = "pos-devops-iac"
+  "Equipe" = "DevOps"
+  "Name" = "instancia-curso-variaveis-outputs"
+}
+vpc_id = "vpc-xxx"
+workspace_atual = "dev"
+
 ```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
