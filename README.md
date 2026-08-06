@@ -106,6 +106,12 @@ O comando vai pedir cinco informações, uma por vez:
 # AWS Session Token [None]: <SEU_SESSION_TOKEN>
 # Default region name [None]: us-east-1
 # Default output format [None]: json
+
+Serão criados os arquivos:
+~/.aws/credentials
+~/.aws/config
+# São os tokens de login e senha
+
 ```
 
 # Checklist final de verificação
