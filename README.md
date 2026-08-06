@@ -36,15 +36,10 @@ git clone https://github.com/dhuberto/aula_iac.git
 cd ~/aula_iac
 ```
 
-```bash
-cd ~/aula_iac/
-cp terraform.tfvars.example terraform.tfvars
-```
-
 ##Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
-
+```bash
 cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars
-
+```
 ##Crie o bucket S3 e a tabela DynamoDB (primeira execução) 
 ```bash
 terraform init -reconfigure
