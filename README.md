@@ -191,6 +191,8 @@ terraform plan
 ```
 ```bash
 terraform apply
+
+# Responda: yes
 ```
 # responda yes
 
