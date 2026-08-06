@@ -9,7 +9,6 @@ terraform {
     bucket         = "danilo-terraform-backend-2026"   # ALTERE PARA O SEU BUCKET
     key            = "terraform/atividade1/terraform.tfstate"
     region         = "us-east-1"
-    use_lockfile   = true
-    dynamodb_table = "terraform-locks"                 # opcional
+    use_lockfile   = true    
   }
 }
