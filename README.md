@@ -382,3 +382,5 @@ Output:
 }
 ```
 </small>
+
+[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge&logo=github)](https://github.com/dhuberto/aula_iac/archive/main.zip)
