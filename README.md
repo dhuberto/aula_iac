@@ -172,17 +172,17 @@ Comando:
 mv backend-setup.tf backend-setup.tf.bak
 ```
 
-### Ative o backend remoto S3
-Comando: 
-```bash
-mv backend.tf.disabled backend.tf
-```
-
 ### Executando o terraform plan para identificar se o terraform consegue acessar o estado remoto 
 
 Comando:
 ```bash
 terraform plan
+```
+
+### Ative o backend remoto S3
+Comando: 
+```bash
+mv backend.tf.disabled backend.tf
 ```
 
 ### Migrar o estado para o S3
