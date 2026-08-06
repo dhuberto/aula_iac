@@ -4,7 +4,7 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 
 ---
 
-## Requisitos atendidos
+# Requisitos atendidos
 
 - VPC com subnet pública, Internet Gateway e route table
 - Security Group com SSH restrito ao IP do aluno e HTTP aberto
@@ -19,7 +19,7 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 
 ---
 
-## Pré-requisitos
+# Pré-requisitos
 
 - Terraform >= 1.0 instalado
 - AWS CLI configurada com credenciais (ou variáveis de ambiente)
@@ -27,7 +27,7 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 
 ---
 
-## Configuração inicial
+# Configuração inicial
 
 ### 1. Clone o repositório
 
@@ -39,11 +39,11 @@ git clone https://github.com/dhuberto/aula_iac.git
 cd ~/aula_iac
 ```
 
-##Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
+## Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
 ```bash
 cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars
 ```
-##Crie o bucket S3 e a tabela DynamoDB (primeira execução) 
+## Crie o bucket S3 e a tabela DynamoDB (primeira execução) 
 ```bash
 terraform init -reconfigure
 ```
@@ -51,28 +51,28 @@ terraform init -reconfigure
 terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_dynamodb_table.terraform_locks
 ```
 
-##Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
+## Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
 ```bash
 mv backend-setup.tf backend-setup.tf.bak
 ```
 
 
-##Migrar o estado para o S3
+## Migrar o estado para o S3
 ```bash
 terraform init -migrate-state
 ```
 
-#Continuar com a criação default para criar ambientes separados:
+# Continuar com a criação default para criar ambientes separados:
 ```bash
 terraform plan
 ```
 ```bash
 terraform apply
 ```
-#responda yes
+# responda yes
 
 
-##Crie os workspaces dos ambientes separados e aplique:
+## Crie os workspaces dos ambientes separados e aplique:
 ```bash
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
@@ -83,7 +83,7 @@ terraform workspace new prod && terraform workspace select prod && terraform app
 ## O Resultado são os Output com os endereços de acesso de cada ambiente
 
 
-#Caso queira Destruir (apagar tudo)
+# Caso queira Destruir (apagar tudo)
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
