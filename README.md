@@ -81,7 +81,10 @@ mv backend-setup.tf backend-setup.tf.bak
 ```bash
 terraform init -migrate-state
 ```
-
+## Ative o backend remoto S3
+```bash
+mv backend.tf.disabled backend.tf
+```
 # Continuar com a criação default para criar ambientes separados:
 ```bash
 terraform plan
