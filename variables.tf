@@ -22,7 +22,7 @@ variable "instance_type" {
 variable "meu_ip_cidr" {
   description = "Seu IP público no formato CIDR (ex: 1.2.3.4/32). Descubra com: curl -s https://checkip.amazonaws.com"
   type        = string
-  default     = "154.64.56.113/32"
+  default     = "200.000.000.000/32"
 }
 
 variable "portas_adicionais_liberadas" {
