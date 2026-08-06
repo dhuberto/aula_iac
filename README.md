@@ -178,6 +178,9 @@ terraform init -migrate-state
 ```bash
 mv backend.tf.disabled backend.tf
 ```
+```bash
+terraform init
+```
 
 # Continuar com a criação default para criar ambientes separados:
 ```bash
