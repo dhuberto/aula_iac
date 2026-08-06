@@ -383,10 +383,13 @@ Output:
 ```
 </small>
 
+### Apagar o Diretório do Projeto na maquina Local
+
+Comando:
 ```bash
 cd ..
 ```
-
+Comando:
 ```bash
 rm -rf aula_iac
 ```
