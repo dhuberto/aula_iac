@@ -49,49 +49,49 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ## Preparação do Ambiente
 
 ## Linux (Debian/Ubuntu)
-
+Comando: 
 ```bash 
 sudo apt update
 ```
-
+Comando: 
 ```bash 
 sudo apt install -y git
 ```
 
 ## Instalação do Terraform
-
+Comando: 
 ```bash 
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
 ```
-
+Comando: 
 ```bash 
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
-
+Comando: 
 ```bash 
 sudo apt update
 ```
-
+Comando: 
 ```bash 
 sudo apt install -y terraform
 ```
 
 ## Crie conta AWS em aws.amazon.com e Instale do AWS CLI v2
-
+Comando: 
 ```bash 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 ```
-
+Comando: 
 ```bash 
 unzip awscliv2.zip
 ```
-
+Comando: 
 ```bash 
 sudo ./aws/install
 ```
 
 ## Execute o aws configure para colocar as credenciais:
-
+Comando: 
 ```bash 
 aws configure
 ```
@@ -114,7 +114,7 @@ Serão criados os arquivos:
 ```
 
 ## Checklist final de verificação
-
+Comandos: 
 ```bash 
 git --version
 ```
