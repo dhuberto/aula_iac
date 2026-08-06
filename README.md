@@ -46,9 +46,9 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ```
 ---
 
-# Preparação do Ambiente
+## Preparação do Ambiente
 
-# Linux (Debian/Ubuntu)
+## Linux (Debian/Ubuntu)
 
 ```bash 
 sudo apt update
@@ -58,7 +58,7 @@ sudo apt update
 sudo apt install -y git
 ```
 
-# Instalação do Terraform
+## Instalação do Terraform
 
 ```bash 
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
@@ -76,7 +76,7 @@ sudo apt update
 sudo apt install -y terraform
 ```
 
-# Crie conta AWS em aws.amazon.com e Instale do AWS CLI v2
+## Crie conta AWS em aws.amazon.com e Instale do AWS CLI v2
 
 ```bash 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -90,7 +90,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-# Execute o aws configure para colocar as credenciais:
+## Execute o aws configure para colocar as credenciais:
 
 ```bash 
 aws configure
@@ -113,7 +113,7 @@ Serão criados os arquivos:
 
 ```
 
-# Checklist final de verificação
+## Checklist final de verificação
 
 ```bash 
 git --version
@@ -139,7 +139,7 @@ usuário está autenticado. Saída esperada:
 ```
 
 
-# Configuração inicial
+## Configuração inicial
 
 ### 1. Clone o repositório
 
@@ -151,7 +151,7 @@ git clone https://github.com/dhuberto/aula_iac.git
 cd ~/aula_iac
 ```
 
-## Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
+### Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
 ```bash
 cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars
 ```
@@ -163,26 +163,27 @@ terraform init -reconfigure
 terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_dynamodb_table.terraform_locks
 ```
 
-## Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
+### Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
 ```bash
 mv backend-setup.tf backend-setup.tf.bak
 ```
 
-## Ative o backend remoto S3
+### Ative o backend remoto S3
 ```bash
 mv backend.tf.disabled backend.tf
 ```
 
-## Migrar o estado para o S3
+### Migrar o estado para o S3
 ```bash
 terraform init -migrate-state
 ```
 <small>Responda: <span style="color: red;">yes</span></small>
 
-## Crie os workspaces dos ambientes separados e aplique:
+### Crie os workspaces dos ambientes separados e aplique:
 ```bash
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
+<small>
 Output:
 ```bash
 descricao_portas_adicionais = "Portas adicionais liberadas: 22"
@@ -200,10 +201,12 @@ tags_aplicadas = {
 vpc_id = "vpc-xxx"
 workspace_atual = "dev"
 ```
-
+</small>
+    
 ```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
+<small>
 Output:
 
 ```bash
@@ -222,10 +225,11 @@ tags_aplicadas = {
 vpc_id = "vpc-0382c834120xxx"
 workspace_atual = "prod"
 ```
+</small>
 
-## O Resultado são os Output com os endereços de acesso de cada ambiente
+### O Resultado são os Output com os endereços de acesso de cada ambiente
 
-## Validações e formatação
+### Validações e formatação
 ```bash
 terraform fmt -check
 ```
@@ -244,7 +248,7 @@ terraform validate
 Success! The configuration is valid.
 ```
 
-# Caso queira Destruir (apagar tudo)
+## Caso queira Destruir (apagar tudo)
 ```bash
 cd ~/aula_iac
 ```
