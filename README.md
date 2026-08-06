@@ -34,3 +34,58 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ```bash
 git clone https://github.com/dhuberto/aula_iac.git
 cd ~/aula_iac
+```
+
+```bash
+git clone https://github.com/dhuberto/aula_iac.git
+```
+```bash
+cd ~/aula_iac/
+cp terraform.tfvars.example terraform.tfvars
+```
+
+##Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
+
+cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars
+
+##Crie o bucket S3 e a tabela DynamoDB (primeira execução) 
+```bash
+terraform init -reconfigure
+terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_dynamodb_table.terraform_locks
+```
+
+##Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
+```bash
+mv backend-setup.tf backend-setup.tf.bak
+```
+
+
+##Migrar o estado para o S3
+```bash
+terraform init -migrate-state
+```
+
+#Continuar com a criação default para criar ambientes separados:
+```bash
+terraform plan
+terraform apply
+#responta yes
+```
+
+##Crie os workspaces dos ambientes separados e aplique:
+```bash
+terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
+terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
+```
+
+## O Resultado são os Output com os endereços de acesso de cada ambiente
+
+
+#Caso queira Destruir (apagar tudo)
+```bash
+terraform workspace select dev && terraform destroy -auto-approve
+terraform workspace select prod && terraform destroy -auto-approve
+aws s3 rb s3://danilo-terraform-backend-2026 --force
+aws dynamodb delete-table --table-name terraform-locks
+```
+
