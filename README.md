@@ -155,7 +155,7 @@ cd ~/aula_iac
 ```bash
 cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars
 ```
-## Crie o bucket S3 e a tabela DynamoDB (primeira execução) 
+## Crie o bucket S3 e a tabela DynamoDB Cria (backend local) (primeira execução) 
 ```bash
 terraform init -reconfigure
 ```
@@ -165,37 +165,20 @@ terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_
 
 ## Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
 ```bash
-mv backend.tf backend.tf.disabled
 mv backend-setup.tf backend-setup.tf.bak
-```
-
-## Migrar o estado para o S3
-```bash
-terraform init -migrate-state
 ```
 
 ## Ative o backend remoto S3
 ```bash
 mv backend.tf.disabled backend.tf
 ```
+
+## Migrar o estado para o S3
 ```bash
-terraform init
+terraform init -migrate-state
 
 # Responda: yes
 ```
-
-
-# Continuar com a criação default para criar ambientes separados:
-```bash
-terraform plan
-```
-```bash
-terraform apply
-
-# Responda: yes
-```
-# responda yes
-
 
 ## Crie os workspaces dos ambientes separados e aplique:
 ```bash
