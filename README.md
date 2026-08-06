@@ -181,7 +181,7 @@ mv backend.tf.disabled backend.tf
 ```bash
 terraform init
 
-# <small>Responda: <span style="color: red;">yes</span></small>
+# Responda: yes
 ```
 
 
