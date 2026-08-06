@@ -65,13 +65,18 @@ terraform init -migrate-state
 #Continuar com a criação default para criar ambientes separados:
 ```bash
 terraform plan
-terraform apply
-#responta yes
 ```
+```bash
+terraform apply
+```
+#responda yes
+
 
 ##Crie os workspaces dos ambientes separados e aplique:
 ```bash
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
+```
+```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
 
@@ -81,8 +86,14 @@ terraform workspace new prod && terraform workspace select prod && terraform app
 #Caso queira Destruir (apagar tudo)
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
+```
+```bash
 terraform workspace select prod && terraform destroy -auto-approve
+```
+```bash
 aws s3 rb s3://danilo-terraform-backend-2026 --force
+```
+```bash
 aws dynamodb delete-table --table-name terraform-locks
 ```
 
