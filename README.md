@@ -120,7 +120,7 @@ cd ~/aula_iac
 ```bash
 terraform destroy
 ```
-### Responda: yes
+Responda: yes
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
