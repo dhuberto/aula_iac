@@ -99,10 +99,11 @@ aws configure
 
 ```bash
 
-O comando vai pedir quatro informações, uma por vez:
+O comando vai pedir cinco informações, uma por vez:
 
 # AWS Access Key ID [None]: <SUA_ACCESS_KEY_ID>
 # AWS Secret Access Key [None]: <SUA_SECRET_ACCESS_KEY>
+# AWS Session Token [None]: <SEU_SESSION_TOKEN>
 # Default region name [None]: us-east-1
 # Default output format [None]: json
 ```
