@@ -26,6 +26,26 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 - Bucket S3 (será criado automaticamente pelo backend-setup.tf)
 
 ---
+## Estrutura do projeto
+
+```
+~/aula_iac/
+├── main.tf                     # Provider e chamada do módulo
+├── variables.tf                # Variáveis
+├── outputs.tf                  # Outputs
+├── backend.tf                  # Backend S3 (com valores fixos)
+├── backend-setup.tf            # Criação do bucket e tabela (executado uma vez)
+├── backend-setup.tf.bak        # Backup após primeira execução
+├── terraform.tfvars.example    # Exemplo de variáveis
+├── .gitignore
+├── README.md
+└── modules/
+    └── webserver/
+        ├── main.tf             # Recursos: VPC, subnet, IGW, SG, EC2
+        ├── variables.tf
+        └── outputs.tf
+```
+---
 
 # Configuração inicial
 
