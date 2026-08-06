@@ -1,7 +1,7 @@
 # Exemplo de variáveis – copie para terraform.tfvars e ajuste
 aws_region  = "us-east-1"
 meu_ip_cidr = "154.64.56.113/32"   # substitua pelo seu IP público
-portas_adicionais_liberadas = ["22"]
+portas_adicionais_liberadas = ["443"]
 tags_extras = {
   Equipe = "DevOps"
 }
