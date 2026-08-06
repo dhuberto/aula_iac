@@ -10,15 +10,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-
-  # ATENÇÃO: Descomente o bloco abaixo APÓS criar o bucket via backend-setup.tf
-  # backend "s3" {
-  #   bucket         = var.bucket_name
-  #   key            = "terraform/atividade1/terraform.tfstate"
-  #   region         = var.aws_region
-  #   use_lockfile   = true
-  #   dynamodb_table = "terraform-locks"
-  # }
 }
 
 provider "aws" {
