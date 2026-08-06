@@ -82,6 +82,13 @@ terraform workspace new prod && terraform workspace select prod && terraform app
 
 ## O Resultado são os Output com os endereços de acesso de cada ambiente
 
+## Validações e formatação
+```bash
+terraform fmt -check
+```
+```bash
+terraform validate
+```
 
 # Caso queira Destruir (apagar tudo)
 ```bash
