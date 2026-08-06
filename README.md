@@ -75,16 +75,16 @@ terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_
 ```bash
 mv backend-setup.tf backend-setup.tf.bak
 ```
-
+## Ative o backend remoto S3
+```bash
+mv backend.tf.disabled backend.tf
+```
 
 ## Migrar o estado para o S3
 ```bash
 terraform init -migrate-state
 ```
-## Ative o backend remoto S3
-```bash
-mv backend.tf.disabled backend.tf
-```
+
 # Continuar com a criação default para criar ambientes separados:
 ```bash
 terraform plan
