@@ -141,7 +141,7 @@ usuário está autenticado. Saída esperada:
 
 ## Configuração inicial
 
-### 1. Clone o repositório
+### Clone o repositório
 Comando: 
 ```bash
 git clone https://github.com/dhuberto/aula_iac.git
