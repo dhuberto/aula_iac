@@ -33,6 +33,9 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 
 ```bash
 git clone https://github.com/dhuberto/aula_iac.git
+```
+
+```bash
 cd ~/aula_iac
 ```
 
@@ -43,6 +46,8 @@ cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_i
 ##Crie o bucket S3 e a tabela DynamoDB (primeira execução) 
 ```bash
 terraform init -reconfigure
+```
+```bash
 terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_dynamodb_table.terraform_locks
 ```
 
