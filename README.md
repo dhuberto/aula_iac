@@ -177,7 +177,7 @@ mv backend.tf.disabled backend.tf
 ```bash
 terraform init -migrate-state
 ```
-# Responda: yes
+<small>Responda: <span style="color: red;">yes</span></small>
 
 ## Crie os workspaces dos ambientes separados e aplique:
 ```bash
