@@ -142,44 +142,51 @@ usuário está autenticado. Saída esperada:
 ## Configuração inicial
 
 ### 1. Clone o repositório
-
+Comando: 
 ```bash
 git clone https://github.com/dhuberto/aula_iac.git
 ```
-
+Comando: 
 ```bash
 cd ~/aula_iac
 ```
 
 ### Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
+Comando: 
 ```bash
 cp terraform.tfvars.example terraform.tfvars && sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars
 ```
 ## Crie o bucket S3 e a tabela DynamoDB Cria (backend local) (primeira execução) 
+Comando: 
 ```bash
 terraform init -reconfigure
 ```
+Comando: 
 ```bash
 terraform apply -auto-approve -target=aws_s3_bucket.terraform_state -target=aws_dynamodb_table.terraform_locks
 ```
 
 ### Após a criação, renomeie o arquivo backend-setup.tf para evitar recriação acidental:
+Comando: 
 ```bash
 mv backend-setup.tf backend-setup.tf.bak
 ```
 
 ### Ative o backend remoto S3
+Comando: 
 ```bash
 mv backend.tf.disabled backend.tf
 ```
 
 ### Migrar o estado para o S3
+Comando: 
 ```bash
 terraform init -migrate-state
 ```
 <small>Responda: <span style="color: red;">yes</span></small>
 
 ### Crie os workspaces dos ambientes separados e aplique:
+Comando: 
 ```bash
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
@@ -204,7 +211,8 @@ vpc_id = "vpc-xxx"
 workspace_atual = "dev"
 ```
 </small>
-    
+
+Comando:     
 ```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
@@ -233,6 +241,7 @@ workspace_atual = "prod"
 ### O Resultado são os Output com os endereços de acesso de cada ambiente
 
 ### Validações e formatação
+Comando: 
 ```bash
 terraform fmt -check
 ```
@@ -243,7 +252,7 @@ main.tf
 terraform.tfvars
 variables.tf
 ```
-
+Comando: 
 ```bash
 terraform validate
 ```
@@ -256,7 +265,7 @@ Success! The configuration is valid.
 ```bash
 cd ~/aula_iac
 ```
-
+Comando: 
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
@@ -291,6 +300,7 @@ Destroy complete! Resources: 7 destroyed.
 ```
 </small>
 
+Comando: 
 ```bash
 terraform workspace select prod && terraform destroy -auto-approve
 ```
@@ -320,6 +330,8 @@ Destroy complete! Resources: 7 destroyed.
 ```
 </small>
 
+Comando: 
+
 ```bash
 aws s3 rb s3://danilo-terraform-backend-2026 --force
 ```
@@ -334,7 +346,7 @@ delete: s3://danilo-terraform-backend-2026/env:/prod/terraform/atividade1/terraf
 remove_bucket: danilo-terraform-backend-2026
 ```
 </small>
-    
+Comando:    
 ```bash
 aws dynamodb delete-table --table-name terraform-locks
 ```
