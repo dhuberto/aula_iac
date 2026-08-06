@@ -117,10 +117,6 @@ terraform validate
 ```bash
 cd ~/aula_iac
 ```
-```bash
-terraform destroy
-```
-<small>Responda: <span style="color: red;">yes</span></small>
 
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
@@ -134,4 +130,12 @@ aws s3 rb s3://danilo-terraform-backend-2026 --force
 ```bash
 aws dynamodb delete-table --table-name terraform-locks
 ```
+
+Ou 
+
+```bash
+terraform destroy
+```
+<small>Responda: <span style="color: red;">yes</span></small>
+
 
