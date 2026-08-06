@@ -1,0 +1,15 @@
+# ============================================
+# BACKEND.TF – STATE REMOTO S3
+# ============================================
+# ATENÇÃO: Substitua o nome do bucket e a região pelos valores reais.
+# Não use variáveis aqui (o Terraform não permite).
+
+terraform {
+  backend "s3" {
+    bucket         = "danilo-terraform-backend-2026"   # ALTERE PARA O SEU BUCKET
+    key            = "terraform/atividade1/terraform.tfstate"
+    region         = "us-east-1"
+    use_lockfile   = true
+    dynamodb_table = "terraform-locks"                 # opcional
+  }
+}

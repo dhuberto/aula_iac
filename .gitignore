@@ -1,0 +1,19 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+*.log
+
+# Backend setup state
+terraform-setup.tfstate
+terraform-setup.tfstate.backup
+
+# Ignore backup files
+*.backup
+
+# Confs AWS
+.aws/
