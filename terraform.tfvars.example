@@ -1,6 +1,6 @@
 # Exemplo de variáveis – copie para terraform.tfvars e ajuste
 aws_region  = "us-east-1"
-meu_ip_cidr = "154.64.56.113/32"   # substitua pelo seu IP público
+meu_ip_cidr = "1.2.3.4/32"   #O comando sed -i "s/meu_ip_cidr = .*/meu_ip_cidr = \"$(curl -s https://checkip.amazonaws.com)\/32\"/" terraform.tfvars vai subistituir pelo seu ip publico.
 portas_adicionais_liberadas = ["443"]
 tags_extras = {
   Equipe = "DevOps"
