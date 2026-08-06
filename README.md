@@ -191,6 +191,8 @@ Comando:
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
 <small>
+
+<img width="855" height="384" alt="{A0F134D8-A43D-4FB9-9A0F-8207327C0C43}" src="https://github.com/user-attachments/assets/866894c6-7bfd-4b11-892a-645401c86f12" />
     
 Output:
 
@@ -211,14 +213,15 @@ vpc_id = "vpc-xxx"
 workspace_atual = "dev"
 ```
 </small>
-<img width="855" height="384" alt="{A0F134D8-A43D-4FB9-9A0F-8207327C0C43}" src="https://github.com/user-attachments/assets/866894c6-7bfd-4b11-892a-645401c86f12" />
-
 
 Comando:     
 ```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
 <small>
+
+<img width="856" height="328" alt="{1BF22815-CB7A-45E1-A249-2A4D9CFDCDE0}" src="https://github.com/user-attachments/assets/58de442c-09e1-4026-874f-b23a68f54ae8" />
+
     
 Output:
 
@@ -239,7 +242,6 @@ vpc_id = "vpc-0382c834120xxx"
 workspace_atual = "prod"
 ```
 </small>
-<img width="856" height="328" alt="{1BF22815-CB7A-45E1-A249-2A4D9CFDCDE0}" src="https://github.com/user-attachments/assets/58de442c-09e1-4026-874f-b23a68f54ae8" />
 
 ### O Resultado são os Output com os endereços de acesso de cada ambiente
 
