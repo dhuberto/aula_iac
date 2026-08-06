@@ -204,6 +204,24 @@ workspace_atual = "dev"
 ```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
+Outputs:
+
+```bash
+descricao_portas_adicionais = "Portas adicionais liberadas: 22"
+dns_publico_instancia = "ec2-54-210-xxx-xxx.compute-1.amazonaws.com"
+ip_publico_instancia = "54.210.xxx.xxx"
+security_group_id = "sg-0192f93a3bcxxx"
+senha_exemplo_sensivel = <sensitive>
+subnet_id = "subnet-0e6d7062145xxx"
+tags_aplicadas = {
+  "Ambiente" = "prod"
+  "Curso" = "pos-devops-iac"
+  "Equipe" = "DevOps"
+  "Name" = "instancia-curso-variaveis-outputs"
+}
+vpc_id = "vpc-0382c834120xxx"
+workspace_atual = "prod"
+```
 
 ## O Resultado são os Output com os endereços de acesso de cada ambiente
 
