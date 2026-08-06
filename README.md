@@ -77,7 +77,7 @@ sudo apt update
 sudo apt install -y terraform
 ```
 
-#Crie conta AWS em aws.amazon.com e Instale do AWS CLI v2
+# Crie conta AWS em aws.amazon.com e Instale do AWS CLI v2
 
 ```bash 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
