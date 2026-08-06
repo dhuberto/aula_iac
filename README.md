@@ -121,6 +121,7 @@ cd ~/aula_iac
 terraform destroy
 ```
 <small>Responda: <span style="color: red;">yes</span></small>
+
 ```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
