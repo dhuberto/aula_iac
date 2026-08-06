@@ -289,6 +289,7 @@ Destroy complete! Resources: 7 destroyed.
 terraform workspace select prod && terraform destroy -auto-approve
 ```
 <small>
+    
 Output:
 ```bash
 module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-0f1deb0cfec31c8aa]
@@ -312,10 +313,12 @@ Releasing state lock. This may take a few moments...
 Destroy complete! Resources: 7 destroyed.
 ```
 </small>
+
 ```bash
 aws s3 rb s3://danilo-terraform-backend-2026 --force
 ```
 <small>
+    
 Output:
 
 ```bash
@@ -330,6 +333,7 @@ remove_bucket: danilo-terraform-backend-2026
 aws dynamodb delete-table --table-name terraform-locks
 ```
 <small>
+    
 Output:
 
 ```bash
