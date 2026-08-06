@@ -32,7 +32,7 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ~/aula_iac/
 ├── main.tf                     # Provider e chamada do módulo
 ├── variables.tf                # Variáveis
-├── outputs.tf                  # Outputs
+├── Output.tf                  # Output
 ├── backend.tf.disabled         # Desativado (renomear para .tf após criar o bucket)
 ├── backend-setup.tf            # Criação do bucket e tabela (executado uma vez, depois renomear .bak)
 ├── terraform.tfvars.example    # Exemplo de variáveis
@@ -42,7 +42,7 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
     └── webserver/
         ├── main.tf             # Recursos: VPC, subnet, IGW, SG, EC2
         ├── variables.tf
-        └── outputs.tf
+        └── Output.tf
 ```
 ---
 
@@ -183,7 +183,7 @@ terraform init -migrate-state
 ```bash
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
-Outputs:
+Output:
 ```bash
 descricao_portas_adicionais = "Portas adicionais liberadas: 22"
 dns_publico_instancia = "ec2-54-242-xxx-xxx.compute-1.amazonaws.com"
@@ -195,7 +195,7 @@ tags_aplicadas = {
   "Ambiente" = "dev"
   "Curso" = "pos-devops-iac"
   "Equipe" = "DevOps"
-  "Name" = "instancia-curso-variaveis-outputs"
+  "Name" = "instancia-curso-variaveis-Output"
 }
 vpc_id = "vpc-xxx"
 workspace_atual = "dev"
@@ -204,7 +204,7 @@ workspace_atual = "dev"
 ```bash
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
-Outputs:
+Output:
 
 ```bash
 descricao_portas_adicionais = "Portas adicionais liberadas: 22"
@@ -217,7 +217,7 @@ tags_aplicadas = {
   "Ambiente" = "prod"
   "Curso" = "pos-devops-iac"
   "Equipe" = "DevOps"
-  "Name" = "instancia-curso-variaveis-outputs"
+  "Name" = "instancia-curso-variaveis-Output"
 }
 vpc_id = "vpc-0382c834120xxx"
 workspace_atual = "prod"
@@ -229,8 +229,19 @@ workspace_atual = "prod"
 ```bash
 terraform fmt -check
 ```
+Output:
+```bash
+backend.tf
+main.tf
+terraform.tfvars
+variables.tf
+```
+
 ```bash
 terraform validate
+```
+```bash
+Success! The configuration is valid.
 ```
 
 # Caso queira Destruir (apagar tudo)
