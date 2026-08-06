@@ -115,6 +115,12 @@ terraform validate
 
 # Caso queira Destruir (apagar tudo)
 ```bash
+cd cd ~/aula_iac
+```
+```bash
+terraform destroy
+```
+```bash
 terraform workspace select dev && terraform destroy -auto-approve
 ```
 ```bash
