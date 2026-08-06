@@ -184,7 +184,9 @@ terraform init -migrate-state
 terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
 ```
 <small>
+    
 Output:
+
 ```bash
 descricao_portas_adicionais = "Portas adicionais liberadas: 22"
 dns_publico_instancia = "ec2-54-242-xxx-xxx.compute-1.amazonaws.com"
@@ -207,6 +209,7 @@ workspace_atual = "dev"
 terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
 ```
 <small>
+    
 Output:
 
 ```bash
