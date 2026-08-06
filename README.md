@@ -249,6 +249,7 @@ Success! The configuration is valid.
 ```
 
 ## Caso queira Destruir (apagar tudo)
+
 ```bash
 cd ~/aula_iac
 ```
@@ -257,7 +258,9 @@ cd ~/aula_iac
 terraform workspace select dev && terraform destroy -auto-approve
 ```
 <small>
+    
 Output:
+
 ```bash
 module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-08d6e3e72fe176e97]
 module.webserver.aws_instance.server: Destroying... [id=i-0ada4f3bdba3c35da]
