@@ -32,7 +32,7 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ~/aula_iac/
 ├── main.tf                     # Provider e chamada do módulo
 ├── variables.tf                # Variáveis
-├── Output.tf                  # Output
+├── Output.tf                   # Output
 ├── backend.tf.disabled         # Desativado (renomear para .tf após criar o bucket)
 ├── backend-setup.tf            # Criação do bucket e tabela (executado uma vez, depois renomear .bak)
 ├── terraform.tfvars.example    # Exemplo de variáveis
