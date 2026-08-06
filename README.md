@@ -180,8 +180,10 @@ mv backend.tf.disabled backend.tf
 ```
 ```bash
 terraform init
+
+# <small>Responda: <span style="color: red;">yes</span></small>
 ```
-<small>Responda: <span style="color: red;">yes</span></small>
+
 
 # Continuar com a criação default para criar ambientes separados:
 ```bash
