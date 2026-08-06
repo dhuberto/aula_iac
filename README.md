@@ -33,9 +33,8 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ├── main.tf                     # Provider e chamada do módulo
 ├── variables.tf                # Variáveis
 ├── outputs.tf                  # Outputs
-├── backend.tf                  # Backend S3 (com valores fixos)
-├── backend-setup.tf            # Criação do bucket e tabela (executado uma vez)
-├── backend-setup.tf.bak        # Backup após primeira execução
+├── backend.tf.disabled         # Desativado (renomear para .tf após criar o bucket)
+├── backend-setup.tf            # Criação do bucket e tabela (executado uma vez, depois renomear .bak)
 ├── terraform.tfvars.example    # Exemplo de variáveis
 ├── .gitignore
 ├── README.md
