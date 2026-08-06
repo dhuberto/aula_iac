@@ -37,9 +37,6 @@ cd ~/aula_iac
 ```
 
 ```bash
-git clone https://github.com/dhuberto/aula_iac.git
-```
-```bash
 cd ~/aula_iac/
 cp terraform.tfvars.example terraform.tfvars
 ```
