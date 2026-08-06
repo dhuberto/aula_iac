@@ -297,15 +297,39 @@ Destroy complete! Resources: 7 destroyed.
 ```bash
 aws s3 rb s3://danilo-terraform-backend-2026 --force
 ```
+Output:
+
+```bash
+delete: s3://danilo-terraform-backend-2026/terraform/atividade1/terraform.tfstate
+delete: s3://danilo-terraform-backend-2026/env:/dev/terraform/atividade1/terraform.tfstate
+delete: s3://danilo-terraform-backend-2026/env:/prod/terraform/atividade1/terraform.tfstate
+remove_bucket: danilo-terraform-backend-2026
+```
+
 ```bash
 aws dynamodb delete-table --table-name terraform-locks
 ```
-
-Ou 
+Output:
 
 ```bash
-terraform destroy
+{
+    "TableDescription": {
+        "TableName": "terraform-locks",
+        "TableStatus": "DELETING",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 0,
+            "WriteCapacityUnits": 0
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:us-east-1:713415863067:table/terraform-locks",
+        "TableId": "3f07c598-66d7-4257-aa20-33ba503360ad",
+        "BillingModeSummary": {
+            "BillingMode": "PAY_PER_REQUEST",
+            "LastUpdateToPayPerRequestDateTime": "2026-08-06T16:01:00.483000-03:00"
+        },
+        "DeletionProtectionEnabled": false
+    }
+}
 ```
-<small>Responda: <span style="color: red;">yes</span></small>
-
-
