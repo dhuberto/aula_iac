@@ -178,6 +178,13 @@ Comando:
 mv backend.tf.disabled backend.tf
 ```
 
+### Executando o terraform plan para identificar se o terraform consegue acessar o estado remoto 
+
+Comando:
+```bash
+terraform plan
+```
+
 ### Migrar o estado para o S3
 Comando: 
 ```bash
