@@ -28,7 +28,7 @@ variable "meu_ip_cidr" {
 variable "portas_adicionais_liberadas" {
   description = "Lista de portas TCP adicionais a liberar no Security Group (além de 22 e 80)"
   type        = list(string)
-  default     = ["22"]
+  default     = ["443"]
 }
 
 variable "tags_extras" {
