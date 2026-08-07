@@ -150,6 +150,26 @@ Comando:
 ```bash
 cd ~/aula_iac
 ```
+### Validações e Formatação dos Confs
+Comando: 
+```bash
+terraform fmt -check
+```
+Output:
+```bash
+backend.tf
+main.tf
+terraform.tfvars
+variables.tf
+```
+Comando: 
+```bash
+terraform validate
+```
+Output:
+```bash
+Success! The configuration is valid.
+```
 
 ### Execute o comando abaixo para gerar o o novo terraform.tfvars terraform.tfvars (com seu IP real)
 Comando: 
@@ -251,27 +271,6 @@ workspace_atual = "prod"
 </small>
 
 ### O Resultado são os Output com os endereços de acesso de cada ambiente
-
-### Validações e formatação
-Comando: 
-```bash
-terraform fmt -check
-```
-Output:
-```bash
-backend.tf
-main.tf
-terraform.tfvars
-variables.tf
-```
-Comando: 
-```bash
-terraform validate
-```
-Output:
-```bash
-Success! The configuration is valid.
-```
 
 ## Caso queira Destruir (apagar tudo)
 Comando: 
