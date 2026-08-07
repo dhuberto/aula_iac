@@ -218,8 +218,8 @@ Comando:
 terraform workspace new dev || terraform workspace select dev && terraform apply -auto-approve
 ```
 <small>
-
-<img width="855" height="384" alt="{A0F134D8-A43D-4FB9-9A0F-8207327C0C43}" src="https://github.com/user-attachments/assets/866894c6-7bfd-4b11-892a-645401c86f12" />
+    
+<img width="856" height="307" alt="{45DB3261-995A-40D2-B9C1-A1C644534B8D}" src="https://github.com/user-attachments/assets/4d3be41c-b755-417c-9e6a-86c1f156ca67" />
     
 Output:
 
@@ -247,8 +247,7 @@ terraform workspace new prod || terraform workspace select prod && terraform app
 ```
 <small>
 
-<img width="856" height="328" alt="{1BF22815-CB7A-45E1-A249-2A4D9CFDCDE0}" src="https://github.com/user-attachments/assets/58de442c-09e1-4026-874f-b23a68f54ae8" />
-
+<img width="857" height="329" alt="{FC2547CF-1601-4859-9A81-E48D5B2B6E35}" src="https://github.com/user-attachments/assets/440aca46-858f-42ef-a9d4-e2ced387ccb9" />
     
 Output:
 
