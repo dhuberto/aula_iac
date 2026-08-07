@@ -225,7 +225,7 @@ terraform workspace new dev || terraform workspace select dev && terraform apply
     
 Output:
 
-```bash
+```text
 descricao_portas_adicionais = "Portas adicionais liberadas: 443"
 dns_publico_instancia = "ec2-98-84-151-231.compute-1.amazonaws.com"
 ip_publico_instancia = "98.84.151.231"
@@ -253,7 +253,7 @@ terraform workspace new prod || terraform workspace select prod && terraform app
     
 Output:
 
-```bash
+```text
 descricao_portas_adicionais = "Portas adicionais liberadas: 443"
 dns_publico_instancia = "ec2-100-24-38-183.compute-1.amazonaws.com"
 ip_publico_instancia = "100.24.38.183"
@@ -286,7 +286,7 @@ terraform workspace select dev && terraform destroy -auto-approve
     
 Output:
 
-```bash
+```text
 module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-086c865cd4b81da98]
 module.webserver.aws_instance.server: Destroying... [id=i-045677b2699cd5d15]
 module.webserver.aws_route_table_association.public: Destruction complete after 1s
@@ -315,7 +315,7 @@ terraform workspace select prod && terraform destroy -auto-approve
 <small>
     
 Output:
-```bash
+```text
 module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-0a65b0b4d4d9b7311]
 module.webserver.aws_instance.server: Destroying... [id=i-02ac340ba2d7a80c3]
 module.webserver.aws_route_table_association.public: Destruction complete after 1s
@@ -352,7 +352,7 @@ aws s3 rb s3://danilo-terraform-backend-2026 --force
 <small>
     
 Output:
-```bash
+```text
 delete: s3://danilo-terraform-backend-2026/terraform/atividade1/terraform.tfstate
 delete: s3://danilo-terraform-backend-2026/env:/dev/terraform/atividade1/terraform.tfstate
 delete: s3://danilo-terraform-backend-2026/env:/prod/terraform/atividade1/terraform.tfstate
@@ -368,7 +368,7 @@ aws dynamodb delete-table --table-name terraform-locks
 <small>
     
 Output:
-```bash
+```text
 {
     "TableDescription": {
         "TableName": "terraform-locks",
