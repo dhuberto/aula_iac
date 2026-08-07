@@ -224,19 +224,19 @@ terraform workspace new dev || terraform workspace select dev && terraform apply
 Output:
 
 ```bash
-descricao_portas_adicionais = "Portas adicionais liberadas: 22"
-dns_publico_instancia = "ec2-54-242-xxx-xxx.compute-1.amazonaws.com"
-ip_publico_instancia = "54.242.xxx.xxx"
-security_group_id = "sg-039efaexxx"
+descricao_portas_adicionais = "Portas adicionais liberadas: 443"
+dns_publico_instancia = "ec2-98-84-151-231.compute-1.amazonaws.com"
+ip_publico_instancia = "98.84.151.231"
+security_group_id = "sg-0c2a4f1ef82d75280"
 senha_exemplo_sensivel = <sensitive>
-subnet_id = "subnet-078e1191xxx"
+subnet_id = "subnet-01a2c1b4f5b63d198"
 tags_aplicadas = {
   "Ambiente" = "dev"
   "Curso" = "pos-devops-iac"
   "Equipe" = "DevOps"
-  "Name" = "instancia-curso-variaveis-Output"
+  "Name" = "instancia-curso-variaveis-outputs"
 }
-vpc_id = "vpc-xxx"
+vpc_id = "vpc-059ca6f14ded18aee"
 workspace_atual = "dev"
 ```
 </small>
