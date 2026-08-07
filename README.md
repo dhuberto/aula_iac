@@ -98,7 +98,7 @@ Comando:
 aws configure
 ```
 
-```text
+```bash
 
 O comando vai pedir cinco informações, uma por vez:
 
