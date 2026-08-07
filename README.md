@@ -287,27 +287,22 @@ terraform workspace select dev && terraform destroy -auto-approve
 Output:
 
 ```bash
-module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-08d6e3e72fe176e97]
-module.webserver.aws_instance.server: Destroying... [id=i-0ada4f3bdba3c35da]
-module.webserver.aws_route_table_association.public: Destruction complete after 2s
-module.webserver.aws_route_table.public: Destroying... [id=rtb-009389562204e529c]
+module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-086c865cd4b81da98]
+module.webserver.aws_instance.server: Destroying... [id=i-045677b2699cd5d15]
+module.webserver.aws_route_table_association.public: Destruction complete after 1s
+module.webserver.aws_route_table.public: Destroying... [id=rtb-0815bb4c1141245fc]
 module.webserver.aws_route_table.public: Destruction complete after 1s
-module.webserver.aws_internet_gateway.main: Destroying... [id=igw-099d362b60d62ad9d]
-module.webserver.aws_instance.server: Still destroying... [id=i-0ada4f3bdba3c35da, 00m10s elapsed]
-module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-099d362b60d62ad9d, 00m10s elapsed]
-module.webserver.aws_instance.server: Still destroying... [id=i-0ada4f3bdba3c35da, 00m20s elapsed]
-module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-099d362b60d62ad9d, 00m20s elapsed]
-module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-099d362b60d62ad9d, 00m43s elapsed]
-module.webserver.aws_instance.server: Still destroying... [id=i-0ada4f3bdba3c35da, 00m46s elapsed]
-module.webserver.aws_instance.server: Destruction complete after 47s
-module.webserver.aws_subnet.public: Destroying... [id=subnet-078e1191d54cc20d0]
-module.webserver.aws_security_group.web: Destroying... [id=sg-039efae4c2d379540]
-module.webserver.aws_internet_gateway.main: Destruction complete after 45s
-module.webserver.aws_security_group.web: Destruction complete after 1s
+module.webserver.aws_internet_gateway.main: Destroying... [id=igw-03fd01332530507bc]
+module.webserver.aws_instance.server: Still destroying... [id=i-045677b2699cd5d15, 00m52s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-03fd01332530507bc, 00m50s elapsed]
+module.webserver.aws_instance.server: Destruction complete after 53s
+module.webserver.aws_subnet.public: Destroying... [id=subnet-0955454dd42a61e07]
+module.webserver.aws_security_group.web: Destroying... [id=sg-09362f9348efa5734]
+module.webserver.aws_internet_gateway.main: Destruction complete after 51s
 module.webserver.aws_subnet.public: Destruction complete after 1s
-module.webserver.aws_vpc.main: Destroying... [id=vpc-0f85088cf31f9df46]
-module.webserver.aws_vpc.main: Destruction complete after 0s
-Releasing state lock. This may take a few moments...
+module.webserver.aws_security_group.web: Destruction complete after 1s
+module.webserver.aws_vpc.main: Destroying... [id=vpc-036941e8faebe8e8c]
+module.webserver.aws_vpc.main: Destruction complete after 1s
 
 Destroy complete! Resources: 7 destroyed.
 ```
@@ -321,23 +316,29 @@ terraform workspace select prod && terraform destroy -auto-approve
     
 Output:
 ```bash
-module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-0f1deb0cfec31c8aa]
-module.webserver.aws_instance.server: Destroying... [id=i-04554525911f9a754]
+module.webserver.aws_route_table_association.public: Destroying... [id=rtbassoc-0a65b0b4d4d9b7311]
+module.webserver.aws_instance.server: Destroying... [id=i-02ac340ba2d7a80c3]
 module.webserver.aws_route_table_association.public: Destruction complete after 1s
-module.webserver.aws_route_table.public: Destroying... [id=rtb-0e396842687ae1b83]
+module.webserver.aws_route_table.public: Destroying... [id=rtb-098662824c2d67f35]
 module.webserver.aws_route_table.public: Destruction complete after 1s
-module.webserver.aws_internet_gateway.main: Destroying... [id=igw-070675fba1eec7251]
-module.webserver.aws_instance.server: Still destroying... [id=i-04554525911f9a754, 00m42s elapsed]
-module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-070675fba1eec7251, 00m42s elapsed]
-module.webserver.aws_instance.server: Destruction complete after 44s
-module.webserver.aws_internet_gateway.main: Destruction complete after 43s
-module.webserver.aws_security_group.web: Destroying... [id=sg-0192f93a3bc74c1b3]
-module.webserver.aws_subnet.public: Destroying... [id=subnet-0e6d70621453ce7df]
+module.webserver.aws_internet_gateway.main: Destroying... [id=igw-0cb28c35a9a7955bf]
+module.webserver.aws_instance.server: Still destroying... [id=i-02ac340ba2d7a80c3, 00m10s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-0cb28c35a9a7955bf, 00m10s elapsed]
+module.webserver.aws_instance.server: Still destroying... [id=i-02ac340ba2d7a80c3, 00m20s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-0cb28c35a9a7955bf, 00m28s elapsed]
+module.webserver.aws_instance.server: Still destroying... [id=i-02ac340ba2d7a80c3, 00m30s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-0cb28c35a9a7955bf, 00m38s elapsed]
+module.webserver.aws_instance.server: Still destroying... [id=i-02ac340ba2d7a80c3, 00m40s elapsed]
+module.webserver.aws_internet_gateway.main: Still destroying... [id=igw-0cb28c35a9a7955bf, 00m48s elapsed]
+module.webserver.aws_instance.server: Still destroying... [id=i-02ac340ba2d7a80c3, 00m50s elapsed]
+module.webserver.aws_instance.server: Destruction complete after 51s
+module.webserver.aws_security_group.web: Destroying... [id=sg-089d42feac6d09544]
+module.webserver.aws_subnet.public: Destroying... [id=subnet-0805c867ef357b49b]
+module.webserver.aws_internet_gateway.main: Destruction complete after 50s
 module.webserver.aws_subnet.public: Destruction complete after 1s
 module.webserver.aws_security_group.web: Destruction complete after 1s
-module.webserver.aws_vpc.main: Destroying... [id=vpc-0382c834120639524]
-module.webserver.aws_vpc.main: Destruction complete after 1s
-Releasing state lock. This may take a few moments...
+module.webserver.aws_vpc.main: Destroying... [id=vpc-0d5a351a0fba8e29b]
+module.webserver.aws_vpc.main: Destruction complete after 0s
 
 Destroy complete! Resources: 7 destroyed.
 ```
