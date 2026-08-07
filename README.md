@@ -253,19 +253,19 @@ terraform workspace new prod || terraform workspace select prod && terraform app
 Output:
 
 ```bash
-descricao_portas_adicionais = "Portas adicionais liberadas: 22"
-dns_publico_instancia = "ec2-54-210-xxx-xxx.compute-1.amazonaws.com"
-ip_publico_instancia = "54.210.xxx.xxx"
-security_group_id = "sg-0192f93a3bcxxx"
+descricao_portas_adicionais = "Portas adicionais liberadas: 443"
+dns_publico_instancia = "ec2-100-24-38-183.compute-1.amazonaws.com"
+ip_publico_instancia = "100.24.38.183"
+security_group_id = "sg-065cfa45ea90e872c"
 senha_exemplo_sensivel = <sensitive>
-subnet_id = "subnet-0e6d7062145xxx"
+subnet_id = "subnet-095422d637d726f27"
 tags_aplicadas = {
   "Ambiente" = "prod"
   "Curso" = "pos-devops-iac"
   "Equipe" = "DevOps"
-  "Name" = "instancia-curso-variaveis-Output"
+  "Name" = "instancia-curso-variaveis-outputs"
 }
-vpc_id = "vpc-0382c834120xxx"
+vpc_id = "vpc-070983c131a97aa2e"
 workspace_atual = "prod"
 ```
 </small>
