@@ -38,6 +38,8 @@ Provisionamento de infraestrutura web na AWS com Terraform, utilizando módulo p
 ├── terraform.tfvars.example    # Exemplo de variáveis
 ├── .gitignore
 ├── README.md
+├── templates/
+├── └── user_data.sh.tpl
 └── modules/
     └── webserver/
         ├── main.tf             # Recursos: VPC, subnet, IGW, SG, EC2
