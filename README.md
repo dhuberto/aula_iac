@@ -195,7 +195,7 @@ terraform init -migrate-state
 ### Crie os workspaces dos ambientes separados e aplique:
 Comando: 
 ```bash
-terraform workspace new dev && terraform workspace select dev && terraform apply -auto-approve
+terraform workspace new dev | terraform workspace select dev | terraform apply -auto-approve
 ```
 <small>
 
@@ -223,7 +223,7 @@ workspace_atual = "dev"
 
 Comando:     
 ```bash
-terraform workspace new prod && terraform workspace select prod && terraform apply -auto-approve
+terraform workspace new prod | terraform workspace select prod | terraform apply -auto-approve
 ```
 <small>
 
