@@ -14,6 +14,7 @@ terraform-setup.tfstate.backup
 
 # Ignore backup files
 *.backup
+*.bak
 
 # Confs AWS
 .aws/
