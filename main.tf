@@ -29,9 +29,9 @@ locals {
     var.tags_extras
   )
 
-  # ==========user_data via templatefile ==========
+  # ==========user_data via templatefile === infomações apresentada a pagina web=======
   user_data = templatefile("${path.module}/templates/user_data.sh.tpl", {
-    data     = "2026-08-1X"
+    data     = "06/07/2026"
     aluno    = "Danilo Huberto"
     turma    = "2025.2"
     ambiente = local.ambiente
